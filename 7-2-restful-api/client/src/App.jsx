@@ -128,12 +128,12 @@ LAB SETUP INSTRUCTIONS
  *    - Return JSON array of songs.
  *
  *  Syntax hint:
-      app.get("__________", async (____, res) => {
+      app.get("/api/songs", async (____, res) => {
         const rows = await __________.find().sort({ createdAt: ___ });
         res.json(____);
       });
 
-      app.get("______________", async (req, res) => {
+      app.get("/api/songs/:id", async (req, res) => {
         const s = await __________.findById(__________);
         if (!s) return res.status(___).json({ message: "______________" });
         res.json(____);
